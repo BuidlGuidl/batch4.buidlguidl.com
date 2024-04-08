@@ -24,8 +24,8 @@ Let's get you caught up on what this batch is all about and what you can expect.
 
 Here's what you'll be doing :
 1. You'll start by introducing yourself to the batch and the mentors in a GitHub discussion.
-2. Next, you'll complete [Issue #1](/../../issues/1) and 'check in' to our smart contract by writing a contract of your own.
-3. After that you'll move to [Issue #2](/../../issues/2) and create a personal page and use a pull request(PR) to send it to the batch repo.
+2. Next, you'll complete [Issue #9](/../../issues/9) and 'check in' to our smart contract by writing a contract of your own.
+3. After that you'll move to [Issue #8](/../../issues/8) and create a personal page and use a pull request(PR) to send it to the batch repo.
 4. From there you will start choosing other open issues to work on, either on your own or in collaboration with other batch members.
 5. The final step is a full dApp chosen and created by the batch! (We will provide ideas on projects you can take on)
 
@@ -37,7 +37,7 @@ First, since our contract is deployed to the Optimism chain, you will want to ma
 
 Then you will head to the open Introductions discussion in your batch's GitHub repo and make a post introducing yourself. Also feel free to introduce yourself in the batch Telegram channel as well if you want.
 
-Next head to the Issues tab of your batch's Github repo.  Once you complete Issue #1, move on to Issue #2.  Everyone will complete the first two issues on their own, then can start taking on the other issues.  Work and collaborate with your batch members in both Github and Telegram for a real-world experience.  If you're working on an issue, looking to collaborate on an issue, or want feedback on an issue or pull request, shout out to your batch!
+Next head to the Issues tab of your batch's Github repo.  Once you complete Issue #9, move on to Issue #8.  Everyone will complete the first two issues on their own, then can start taking on the other issues.  Work and collaborate with your batch members in both Github and Telegram for a real-world experience.  If you're working on an issue, looking to collaborate on an issue, or want feedback on an issue or pull request, shout out to your batch!
 
 > 😲 Github can seem daunting! Take a look at our detailed guide on the "Fork and Pull" Github process [here](https://gist.github.com/ZakGriffith/69d1eb8baebddd7d370b87a65a7e3ec0).
 

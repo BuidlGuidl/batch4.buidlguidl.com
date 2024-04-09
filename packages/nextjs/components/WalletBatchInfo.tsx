@@ -18,8 +18,6 @@ export default function WalletBatchInfo() {
   });
   const isCheckedIn = userContractAddress && userContractAddress !== zeroAddress;
 
-  console.log({ isInAllowList, userContractAddress, isCheckedIn });
-
   if (!address) {
     return <></>;
   }

@@ -22,19 +22,34 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("BatchRegistry", {
+  // await deploy("BatchRegistry", {
+  //   from: deployer,
+  //   // Contract constructor arguments
+  //   args: [deployer],
+  //   log: true,
+  //   // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
+  //   // automatically mining the contract deployment transaction. There is no effect on live networks.
+  //   autoMine: true,
+  // });
+
+  // Get the deployed contract to interact with it after deploying.
+  // const batchRegistry = await hre.ethers.getContract<Contract>("BatchRegistry", deployer);
+  // const batchRegistryAddress = await batchRegistry.getAddress();
+
+  // console.log("BatchRegistry deployed to:", batchRegistryAddress);
+
+  await deploy("CheckIn", {
     from: deployer,
-    // Contract constructor arguments
-    args: [deployer],
+    args: ["0x8C71260fD3eC957faFf9F36Ef9d8C2B988c48E16"],
     log: true,
-    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
-    // automatically mining the contract deployment transaction. There is no effect on live networks.
     autoMine: true,
   });
 
   // Get the deployed contract to interact with it after deploying.
-  const batchRegistry = await hre.ethers.getContract<Contract>("BatchRegistry", deployer);
-  console.log("BatchRegistry deployed to:", await batchRegistry.getAddress());
+  const checkIn = await hre.ethers.getContract<Contract>("CheckIn", deployer);
+  const checkInAddress = await checkIn.getAddress();
+
+  console.log("CheckIn deployed to:", checkInAddress);
 };
 
 export default deployYourContract;

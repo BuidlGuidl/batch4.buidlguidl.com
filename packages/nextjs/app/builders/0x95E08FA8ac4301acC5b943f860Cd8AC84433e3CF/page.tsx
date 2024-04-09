@@ -1,11 +1,10 @@
-"use client";
-
 import type { NextPage } from "next";
 
 const PersonalPage: NextPage = () => {
   return (
     <div className="flex flex-col items-center md:flex-row justify-center md:h-[80vh] md:gap-4 ">
       <div className="flex flex-col items-center mb-4 md:mb-0">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://avatars.githubusercontent.com/u/56181880?v=4"
           alt="Bhavya Gor"

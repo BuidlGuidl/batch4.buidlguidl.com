@@ -1,5 +1,3 @@
-"use client";
-
 import type { NextPage } from "next";
 import { GlobeAltIcon, MapPinIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 
@@ -9,6 +7,7 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10 justify-center">
         <div className="flex gap-10">
           <div className="">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="https://avatars.githubusercontent.com/u/39233126?v=4" className="rounded-lg h-80" alt="Batch 4" />
           </div>
           <div className="my-auto flex flex-col gap-1">

@@ -24,7 +24,7 @@ const EnviloggerProfile: NextPage = () => {
           </a>{" "}
           and{" "}
           <a className="link" href="https://speedrunethereum.com/">
-            speedrunethereum.org
+            speedrunethereum.com
           </a>
           . Looking forward to cooperate and make some great stuff.
         </p>

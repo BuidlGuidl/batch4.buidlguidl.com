@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import BatchRegistryJSON from "../../../hardhat/artifacts/contracts/BatchRegistry.sol/BatchRegistry.json";
 import makeBlockie from "ethereum-blockies-base64";
@@ -48,11 +49,15 @@ const BuildersPage: NextPage = () => {
           {builders.map((builder, index) => (
             <div key={index} className="bg-white border-2 border-gray-200 shadow-sm rounded-lg overflow-hidden">
               <div className="p-5">
-                <img
-                  src={getBlockieImageUrl(builder)}
-                  className="mx-auto h-32 w-32 rounded-full shadow-lg mb-4"
-                  alt={`Builder ${builder}`}
-                />
+                <div className="mx-auto h-32 w-32 rounded-full shadow-lg mb-4 relative">
+                  <Image
+                    src={getBlockieImageUrl(builder)}
+                    alt={`Builder ${builder}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-full"
+                  />
+                </div>
                 <h3 className="text-lg text-black font-semibold text-center">Builder {index + 1}</h3>
                 <p className="text-gray-600 text-sm text-center mt-1">Address: {truncateAddress(builder)}</p>
               </div>

@@ -4,12 +4,12 @@ import { Address } from "~~/components/scaffold-eth";
 const BillPage: NextPage = () => {
   return (
     <div className="flex items-center flex-col flex-grow justify-center">
-      <div className="flex gap-10 bg-accent-content/30 rounded-lg">
-        <div className="">
+      <div className="flex flex-col md:flex-row gap-10 bg-accent-content/30 rounded-lg">
+        <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="https://avatars.githubusercontent.com/u/34168009?v=4" className="rounded-lg h-80" alt="Avatar" />
         </div>
-        <div className="my-auto flex flex-col gap-1 mr-3">
+        <div className="flex flex-col gap-1 m-auto pb-4 md:pb-0 pr-2">
           <h1 className="text-3xl">
             <b>Bill Schumacher</b>{" "}
           </h1>

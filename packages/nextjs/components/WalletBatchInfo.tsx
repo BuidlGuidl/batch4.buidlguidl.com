@@ -26,12 +26,27 @@ export default function WalletBatchInfo() {
     <div className="flex">
       {isInAllowList ? (
         isCheckedIn ? (
-          <ShieldCheckIcon className="h-6" title="You have checked in successfully" />
+          <div
+            className="tooltip tooltip-bottom tooltip-primary"
+            data-tip="Wallet address is part of the current batch and has successfully checked-in!"
+          >
+            <ShieldCheckIcon className="h-6" />
+          </div>
         ) : (
-          <ShieldExclamationIcon className="h-6" title="You are in the batch but not checked in" />
+          <div
+            className="tooltip tooltip-bottom tooltip-primary"
+            data-tip="Wallet address is part of the current batch, but is yet to check in!"
+          >
+            <ShieldExclamationIcon className="h-6" />
+          </div>
         )
       ) : (
-        <LockClosedIcon className="h-6" title="You are not in the batch" />
+        <div
+          className="tooltip tooltip-bottom tooltip-primary"
+          data-tip="Wallet address is not part of the current batch!"
+        >
+          <LockClosedIcon className="h-6" />
+        </div>
       )}
     </div>
   );

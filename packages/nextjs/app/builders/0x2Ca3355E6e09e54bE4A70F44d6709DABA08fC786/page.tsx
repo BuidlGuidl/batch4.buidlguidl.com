@@ -5,6 +5,7 @@ const PaulPage: NextPage = () => {
     <div className="flex items-center justify-center min-h-screen">
       <div className="max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-xl flex gap-12 transform -translate-y-1/2">
         <div className="flex-shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://avatars.githubusercontent.com/u/54938377?v=4"
             alt="Paul Sizon"

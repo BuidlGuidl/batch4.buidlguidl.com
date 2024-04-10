@@ -6,7 +6,7 @@ import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
-  const { data: checkedInCount } = useScaffoldContractRead({
+  const { data: checkedInCount, isFetched: checkedInCountFetched } = useScaffoldContractRead({
     contractName: "BatchRegistry",
     functionName: "checkedInCounter",
   });
@@ -22,7 +22,11 @@ const Home: NextPage = () => {
           <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
           <p className="text-lg flex gap-2 justify-center">
             <span className="font-bold">Checked in builders count:</span>
-            <span>{(checkedInCount || 0n).toString()}</span>
+            {checkedInCountFetched ? (
+              <span>{(checkedInCount || 0n).toString()}</span>
+            ) : (
+              <span className="loading loading-spinner loading-xs"></span>
+            )}
           </p>
         </div>
 

@@ -3,39 +3,32 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BatchRegistryJSON from "../../../hardhat/artifacts/contracts/BatchRegistry.sol/BatchRegistry.json";
 import makeBlockie from "ethereum-blockies-base64";
-import { ethers } from "ethers";
 import type { NextPage } from "next";
 import { GlobeAltIcon } from "@heroicons/react/24/solid";
-
-const BatchRegistryAddress = "0x8C71260fD3eC957faFf9F36Ef9d8C2B988c48E16";
+import { useScaffoldEventHistory } from "~~/hooks/scaffold-eth";
 
 const BuildersPage: NextPage = () => {
   const [builders, setBuilders] = useState<string[]>([]);
 
+  const { data: checkedInEvents, isLoading } = useScaffoldEventHistory({
+    contractName: "BatchRegistry",
+    eventName: "CheckedIn",
+    fromBlock: 118484927n,
+    watch: true,
+  });
+
   useEffect(() => {
-    const fetchBuilders = async () => {
-      if (typeof window.ethereum !== "undefined") {
-        const provider = new ethers.providers.Web3Provider(window.ethereum as any);
-        const contract = new ethers.Contract(BatchRegistryAddress, BatchRegistryJSON.abi, provider);
+    if (!isLoading && checkedInEvents) {
+      const builderAddresses = checkedInEvents
+        .map(event => event.args.builder as string | undefined)
+        .filter((builder): builder is string => !!builder);
+      const uniqueBuilders = Array.from(new Set(builderAddresses));
+      setBuilders(uniqueBuilders);
+    }
+  }, [checkedInEvents, isLoading]);
 
-        try {
-          const filter = contract.filters.CheckedIn(null, null, null);
-          const events = await contract.queryFilter(filter, -100000);
-          const builderAddresses = events.map(event => event.args?.builder);
-          const uniqueBuilders = Array.from(new Set(builderAddresses));
-          setBuilders(uniqueBuilders);
-        } catch (error) {
-          console.error("Error fetching builders:", error);
-        }
-      }
-    };
-
-    fetchBuilders();
-  }, []);
-
-  const truncateAddress = (address: string | any[]) => `${address.slice(0, 6)}...${address.slice(-4)}`;
+  const truncateAddress = (address: string) => `${address.slice(0, 6)}...${address.slice(-4)}`;
 
   const getBlockieImageUrl = (address: string) => {
     return makeBlockie(address);

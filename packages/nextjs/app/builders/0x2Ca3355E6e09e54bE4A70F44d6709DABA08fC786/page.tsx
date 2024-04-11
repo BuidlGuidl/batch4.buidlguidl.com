@@ -17,7 +17,7 @@ const PaulPage: NextPage = () => {
         <div className="flex flex-col justify-center text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800">Paul Sizon</h1>
           <span className="text-sm md:text-base text-gray-500">📍Buenos Aires🇦🇷</span>
-          <p className="text-gray-600 mt-2">Mobile developer aiming to advance the future of blockchain technology.</p>
+          <p className="text-gray-600 mt-2">Mobile developer aiming to advance the future of blockchain technology</p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
             <a
               href="https://t.me/pablo_kagathos"

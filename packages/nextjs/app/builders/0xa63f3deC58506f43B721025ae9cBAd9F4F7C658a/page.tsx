@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { NextPage } from "next";
 import { GithubIcon } from "~~/components/assets/GithubIcon";
 
@@ -7,7 +8,7 @@ const VhforbesProfilePage: NextPage = () => {
       <div className="flex flex-col items-center">
         <div className="avatar left-2">
           <div className="w-32 mr-4 mask mask-hexagon text-center">
-            <img src="https://avatars.githubusercontent.com/u/39014716?v=4" />
+            <Image alt="profile-picture" src="https://avatars.githubusercontent.com/u/39014716?v=4" />
           </div>
         </div>
 

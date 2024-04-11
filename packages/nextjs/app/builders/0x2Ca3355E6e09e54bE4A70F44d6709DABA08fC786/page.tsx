@@ -3,8 +3,8 @@ import { NextPage } from "next";
 const PaulPage: NextPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-xl flex gap-12 transform -translate-y-1/2">
-        <div className="flex-shrink-0">
+      <div className="w-full max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-xl flex flex-col md:flex-row gap-12 mt-[-4rem] md:mt-[-8rem] lg:mt-[-12rem] xl:mt-[-16rem]">
+        <div className="flex-shrink-0 mx-auto md:mx-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://avatars.githubusercontent.com/u/54938377?v=4"
@@ -14,10 +14,10 @@ const PaulPage: NextPage = () => {
             height={192}
           />
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800">Paul Sizon</h1>
           <span className="text-sm md:text-base text-gray-500">📍Buenos Aires🇦🇷</span>
-          <p className="text-gray-600 mt-2">Mobile developer aiming to advance the future of blockchain technology</p>
+          <p className="text-gray-600 mt-2">Mobile developer aiming to advance the future of blockchain technology.</p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
             <a
               href="https://t.me/pablo_kagathos"

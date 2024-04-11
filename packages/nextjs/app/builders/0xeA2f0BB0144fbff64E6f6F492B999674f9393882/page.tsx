@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { NextPage } from "next";
 import { Address } from "~~/components/scaffold-eth";

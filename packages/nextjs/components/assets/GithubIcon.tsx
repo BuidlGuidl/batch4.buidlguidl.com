@@ -1,24 +1,7 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-
 export const GithubIcon = ({ className }: { className: string }) => {
-  const { resolvedTheme } = useTheme();
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (resolvedTheme === "dark") {
-      setIsDarkMode(true);
-      return;
-    }
-
-    setIsDarkMode(false);
-  }, [resolvedTheme]);
-
   return (
     <svg
-      className={`${className} ${isDarkMode ? "fill-white" : "fill-black"}`}
+      className={`${className}  dark:fill-white fill-black`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width="16"

@@ -21,7 +21,7 @@ const ProfilePage: NextPage = () => {
         <p className="text-purple-300 mt-1">Navigating EVM rabbit hole 🔍 with auditing interest 🧠</p>
         <div className="flex items-center text-sm text-gray-200 mt-1">
           <TrophyIcon className="h-6 text-yellow-300 animate-pulse mr-2" />
-          <span>Multiple hackathon winners</span>
+          <span>Multiple hackathon winner</span>
         </div>
         <p className="text-sm text-gray-200 mt-1">Paris/Singapore based</p>
         <div className="flex items-center gap-2 mt-1">

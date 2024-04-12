@@ -13,7 +13,7 @@ const Batch4AddressDisplay = ({ address, index }: { address: string; index: numb
       <div className="mx-auto h-32 w-32 rounded-full overflow-hidden shadow-lg mb-4 relative">
         <Batch4Avatar address={address} size={128} />
       </div>
-      <h3 className={"text-lg font-semibold text-center text-black"}>Builder {index + 1}</h3>
+      <h3 className="text-lg font-semibold text-center text-black">Builder {index + 1}</h3>
       <div className="text-gray-600 text-sm text-center mt-1">
         <Batch4Address address={address} format="short" size="base" />
       </div>

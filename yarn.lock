@@ -1878,6 +1878,7 @@ __metadata:
     "@uniswap/v2-sdk": ^3.0.1
     autoprefixer: ^10.4.12
     blo: ^1.0.1
+    chart.js: ^4.4.2
     daisyui: 4.5.0
     eslint: ^8.15.0
     eslint-config-next: ^14.0.4
@@ -1890,6 +1891,7 @@ __metadata:
     prettier: ^2.8.4
     qrcode.react: ^3.1.0
     react: ^18.2.0
+    react-chartjs-2: ^5.2.0
     react-copy-to-clipboard: ^5.1.0
     react-dom: ^18.2.0
     react-hot-toast: ^2.4.0
@@ -12297,11 +12299,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "se-2@workspace:."
   dependencies:
-    chart.js: ^4.4.2
     husky: ^8.0.1
     lint-staged: ^13.0.3
     next: ^14.0.4
-    react-chartjs-2: ^5.2.0
     vercel: ^32.4.1
   languageName: unknown
   linkType: soft

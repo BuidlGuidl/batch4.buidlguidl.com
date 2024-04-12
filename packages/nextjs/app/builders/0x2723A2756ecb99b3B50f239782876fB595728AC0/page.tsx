@@ -2,12 +2,9 @@ import type { NextPage } from "next";
 
 const PersonalPage: NextPage = () => {
   return (
-    <section className="p-[6rem] bg-[#141517] h-screen w-screen justify-center" id="home">
+    <section className="p-[1rem] md:p-[3rem] lg:p-[6rem] bg-[#141517] h-auto md:h-screen justify-center" id="home">
       <div className="mx grid gap-6 max-w-5xl mx-auto">
-        <div
-          className="home__content grid gap-6 grid-cols-[116px minmax(2, 1fr)] md:pt-[3.5rem] pt-[5.5rem] gap-x-8 items-center"
-          style={{ gridTemplateColumns: "116px repeat(2, 1fr)" }}
-        >
+        <div className="home__content grid gap-6 grid-cols-[26px_minmax(26px,_1fr)] md:grid-cols-[116px_minmax(116px,_1fr)] md:pt-[3.5rem] pt-[1.5rem] gap-x-4 md:gap-x-8 items-center">
           <div className="grid gap-y-8">
             <a href="https://www.linkedin.com/in/itsarjn" className="text-[#d5d5d5] text-xl" target="_blank">
               <span className="[&>svg]:h-5 [&>svg]:w-5">
@@ -46,34 +43,38 @@ const PersonalPage: NextPage = () => {
             </a>
           </div>
 
-          <div className="bg-center bg-cover order-1 justify-self-center bg-no-repeat rounded-full w-85 h-85 overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha-1_MyjCXLMZulLqpC0yhRhKaZ5cnSt1PbAPG4WA3B0fL8Ogyul_DTsAV-HE0q1JhR0uwS8tFz3NNwfIfNtQVjY_-FzfHzf6s=w3024-h1658-v0"
-              alt="Arjun Sasikumar"
-              className="rounded-full shadow-lg"
-              width={400}
-              height={400}
-            />
-          </div>
+          <div className="flex flex-col-reverse md:flex-row gap-x-8 items-center md:items-start">
+            <div className="bg-center bg-cover order-1 justify-self-center bg-no-repeat rounded-full w-85 h-85 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha-1_MyjCXLMZulLqpC0yhRhKaZ5cnSt1PbAPG4WA3B0fL8Ogyul_DTsAV-HE0q1JhR0uwS8tFz3NNwfIfNtQVjY_-FzfHzf6s=w3024-h1658-v0"
+                alt="Arjun Sasikumar"
+                className="rounded-full shadow-lg h-[280px] w-[280px] md:h-[400px] md:w-[400px]"
+                width={400}
+                height={400}
+              />
+            </div>
 
-          <div className="home__data">
-            <h1 className="mb-1 text-7xl text-[#EAEBED] mt-[10px]">Arjun 👨🏻‍💻🔥</h1>
+            <div className="home__data mt-6 md:mt-0">
+              <h1 className="mb-1 text-4xl md:text-7xl text-[#EAEBED] mt-[10px]">Arjun 👨🏻‍💻🔥</h1>
 
-            <h3 className="home__subtitle font-normal mb-4 text-2xl text-[#B1B1B2] mt-[10px]">
-              Fullstack Web3 Engineer
-            </h3>
+              <h3 className="home__subtitle font-normal mb-2 md:mb-4 text-xl md:text-2xl text-[#B1B1B2] mt-[10px]">
+                CoFounder & Fullstack Web3 Engineer
+              </h3>
 
-            <br />
+              <hr />
+              <br />
+              <br />
 
-            <p className="max-w-[400px] mb-12 text-[#EAEBED] m-[5px] text-0.9xl">
-              I am a full stack web3 degen with a knack for architecting & building cool products.
-            </p>
+              <p className="max-w-[400px] mb-6 md:mb-12 text-[#EAEBED] m-[5px] text-md md:text-0.9xl">
+                I am a full stack web3 degen with a knack for architecting & building cool products.
+              </p>
 
-            <p className="max-w-[400px] mb-12 text-[#EAEBED] m-[5px] text-0.9xl">
-              CoFounder of <a href="https://getwalletx.com">WalletX</a>, a gasless smart wallet browser extension
-              designed for getting the best out of the onchain world.
-            </p>
+              <p className="max-w-[400px] mb-12 text-[#EAEBED] m-[5px] text-md md:text-0.9xl">
+                Currently spearheading <a href="https://getwalletx.com">WalletX</a>, a gasless smart wallet browser
+                extension designed for getting the best out of the onchain world.
+              </p>
+            </div>
           </div>
         </div>
       </div>

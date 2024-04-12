@@ -9,14 +9,14 @@ const Batch4AddressDisplay = ({ address, index }: { address: string; index: numb
   const isDarkMode = resolvedTheme === "dark";
 
   return (
-    <div className={`flex flex-col items-center justify-center rounded-lg p-5 bg-white shadow-md`}>
-      <div className="mx-auto h-32 w-32 rounded-full overflow-hidden shadow-lg mb-4 relative ">
+    <div className="flex flex-col items-center justify-center rounded-lg p-5 bg-white shadow-md">
+      <div className="mx-auto h-32 w-32 rounded-full overflow-hidden shadow-lg mb-4 relative">
         <Batch4Avatar address={address} size={128} />
       </div>
       <h3 className={"text-lg font-semibold text-center text-black"}>Builder {index + 1}</h3>
-      <p className={"text-gray-600 text-sm text-center mt-1 text-black"}>
+      <div className="text-gray-600 text-sm text-center mt-1">
         <Batch4Address address={address} format="short" size="base" />
-      </p>
+      </div>
       <div className="mt-4">
         <Link href={`/builders/${address}`} passHref>
           <button

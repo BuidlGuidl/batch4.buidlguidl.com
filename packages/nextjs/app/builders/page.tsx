@@ -10,7 +10,6 @@ const BuildersPage: NextPage = () => {
     contractName: "BatchRegistry",
     eventName: "CheckedIn",
     fromBlock: 118484927n,
-    watch: true,
   });
 
   const builderAddresses =
@@ -32,7 +31,7 @@ const BuildersPage: NextPage = () => {
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {isLoading ? (
-            <div className="col-span-1 sm:col-span-2 lg:col-span-4 flex justify-center items-center ">
+            <div className="col-span-1 sm:col-span-2 lg:col-span-4 flex justify-center items-center">
               <span className={`loading loading-spinner ${isDarkMode ? "text-white" : "text-info"}`}></span>
             </div>
           ) : (

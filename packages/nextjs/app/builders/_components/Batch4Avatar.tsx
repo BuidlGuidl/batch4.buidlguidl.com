@@ -26,6 +26,7 @@ export const Batch4Avatar: AvatarComponent = ({ address, size }) => {
   }, [fetchedEnsAvatar]);
 
   return (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       className="rounded-full"
       src={ensAvatar || blo(address as `0x${string}`)}

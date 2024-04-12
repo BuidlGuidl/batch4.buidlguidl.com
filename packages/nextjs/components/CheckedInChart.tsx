@@ -1,8 +1,10 @@
 "use client";
 
 import { CategoryScale, Chart as ChartJS, LineElement, LinearScale, PointElement, TimeScale, Tooltip } from "chart.js";
+import { useTheme } from "next-themes";
 import { Line } from "react-chartjs-2";
 import { useScaffoldEventHistory } from "~~/hooks/scaffold-eth";
+import twconfig from "~~/tailwind.config";
 
 export const CheckedInChart = () => {
   ChartJS.register(CategoryScale, LinearScale, TimeScale, PointElement, LineElement, Tooltip);
@@ -11,8 +13,9 @@ export const CheckedInChart = () => {
     contractName: "BatchRegistry",
     eventName: "CheckedIn",
     fromBlock: 118484927n,
-    watch: true,
   });
+
+  const { theme } = useTheme();
 
   const firstCheckInEvents = checkedInEvents ? checkedInEvents.filter(event => event.args?.first === true) : [];
 
@@ -32,21 +35,25 @@ export const CheckedInChart = () => {
   }, []);
 
   if (isLoading || firstCheckInData.length === 0) {
-    return <div>Loading...</div>;
+    return <div className="skeleton w-full max-w-[800px] mx-auto p-8 rounded-3xl h-96"></div>;
   }
+
+  const themeColor = (module: string): string => {
+    return theme === "light" ? twconfig.daisyui.themes[0].light[module] : twconfig.daisyui.themes[1].dark[module];
+  };
 
   return (
     <div className="w-full max-w-[800px] mx-auto p-8 bg-base-100 rounded-3xl">
-      <h1 className="text-center">Builder Checkins</h1>
+      <h1 className="text-center text-xl">Checked In Builders</h1>
       <Line
         data={{
           labels: firstCheckInData.map(data => data.timestamp),
           datasets: [
             {
               data: cumulativeBuilders,
-              label: "Cumulative Builders",
-              backgroundColor: "black",
-              pointBackgroundColor: "black",
+              pointBackgroundColor: themeColor("secondary-content"),
+              hoverBackgroundColor: themeColor("accent"),
+              borderColor: themeColor("accent"),
               showLine: true,
               tension: 0.1,
             },
@@ -61,7 +68,7 @@ export const CheckedInChart = () => {
                   const date = new Date(value);
                   return date.toLocaleDateString();
                 },
-                color: "black",
+                color: themeColor("secondary-content"),
               },
             },
             y: {
@@ -70,7 +77,7 @@ export const CheckedInChart = () => {
               max: cumulativeBuilders[cumulativeBuilders.length - 1] + 5,
               ticks: {
                 stepSize: 1,
-                color: "black",
+                color: themeColor("secondary-content"),
               },
             },
           },

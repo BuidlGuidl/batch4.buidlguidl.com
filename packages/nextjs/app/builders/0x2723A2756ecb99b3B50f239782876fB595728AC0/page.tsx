@@ -1,18 +1,12 @@
 import type { NextPage } from "next";
 
 const PersonalPage: NextPage = () => {
-  const styles = {
-    home__content: {
-      "grid-template-columns": "116px repeat(2, 1fr )",
-    },
-  };
-
   return (
-    <section className="p-[6rem] bg-[#00000073] h-screen w-screen justify-center" id="home">
+    <section className="p-[6rem] bg-[#141517] h-screen w-screen justify-center" id="home">
       <div className="mx grid gap-6 max-w-5xl mx-auto">
         <div
           className="home__content grid gap-6 grid-cols-[116px minmax(2, 1fr)] md:pt-[3.5rem] pt-[5.5rem] gap-x-8 items-center"
-          style={styles.home__content as React.CSSProperties}
+          style={{ gridTemplateColumns: "116px repeat(2, 1fr)" }}
         >
           <div className="grid gap-y-8">
             <a href="https://www.linkedin.com/in/itsarjn" className="text-[#d5d5d5] text-xl" target="_blank">
@@ -64,19 +58,19 @@ const PersonalPage: NextPage = () => {
           </div>
 
           <div className="home__data">
-            <h1 className="mb-1 text-7xl text-[#d5d5d5] mt-[10px]">Arjun 👨🏻‍💻🔥</h1>
+            <h1 className="mb-1 text-7xl text-[#EAEBED] mt-[10px]">Arjun 👨🏻‍💻🔥</h1>
 
-            <h3 className="home__subtitle font-normal mb-4 text-2xl text-[#d5d5d5] mt-[10px]">
+            <h3 className="home__subtitle font-normal mb-4 text-2xl text-[#B1B1B2] mt-[10px]">
               Fullstack Web3 Engineer
             </h3>
 
             <br />
 
-            <p className="max-w-[400px] mb-12 text-[#d5d5d5] m-[5px] text-0.9xl">
+            <p className="max-w-[400px] mb-12 text-[#EAEBED] m-[5px] text-0.9xl">
               I am a full stack web3 degen with a knack for architecting & building cool products.
             </p>
 
-            <p className="max-w-[400px] mb-12 text-[#d5d5d5] m-[5px] text-0.9xl">
+            <p className="max-w-[400px] mb-12 text-[#EAEBED] m-[5px] text-0.9xl">
               CoFounder of <a href="https://getwalletx.com">WalletX</a>, a gasless smart wallet browser extension
               designed for getting the best out of the onchain world.
             </p>

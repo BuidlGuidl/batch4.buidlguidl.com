@@ -1,11 +1,12 @@
 import Image from "next/image";
 import type { NextPage } from "next";
-import { CalculatorIcon, CogIcon } from "@heroicons/react/24/solid";
+import { CalculatorIcon, ClockIcon, CogIcon, TrophyIcon } from "@heroicons/react/24/solid";
+
+// Ensure all needed icons are imported
 
 const ProfilePage: NextPage = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-black p-6 text-gray-100">
-      {/* Use the Image component instead of img for optimized image handling */}
       <div className="rounded-lg shadow-xl h-80 md:mr-10 relative w-80">
         <Image
           src="https://avatars.githubusercontent.com/mrhouzlane"
@@ -17,10 +18,19 @@ const ProfilePage: NextPage = () => {
       </div>
       <div className="flex flex-col items-center md:items-start mt-6 md:mt-0">
         <h1 className="text-4xl font-bold text-purple-400 font-comic">Mehdi Rhouzlane</h1>
-        <p className="text-purple-300 mt-1">Navigating EVM rabbit hole 🔍 with auditing and CTFs flavor 🧠</p>
+        <p className="text-purple-300 mt-1">Navigating EVM rabbit hole 🔍 with auditing interest 🧠</p>
+        <div className="flex items-center text-sm text-gray-200 mt-1">
+          <TrophyIcon className="h-6 text-yellow-300 animate-pulse mr-2" />
+          <span>Multiple hackathon winners</span>
+        </div>
+        <p className="text-sm text-gray-200 mt-1">Paris/Singapore based</p>
+        <div className="flex items-center gap-2 mt-1">
+          <ClockIcon className="h-6 text-red-400 animate-spin-slow" />
+          <span>Current Time Zone: GMT+2</span>
+        </div>
         <div className="flex gap-2 mt-2">
           <CogIcon className="h-6 text-green-400 animate-bounce" />
-          <span>Interested in low-level Solidity</span>
+          <span>Building web3 projects</span>
         </div>
         <div className="flex gap-2 mt-1">
           <CalculatorIcon className="h-6 text-blue-300 animate-spin-slow" />

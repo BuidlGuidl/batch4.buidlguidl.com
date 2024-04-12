@@ -40,5 +40,9 @@
     "lint-staged": "^13.0.3",
     "next": "^14.0.4",
     "vercel": "^32.4.1"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.2",
+    "react-chartjs-2": "^5.2.0"
   }
 }

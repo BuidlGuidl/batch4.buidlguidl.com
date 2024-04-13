@@ -2,8 +2,6 @@ import Image from "next/image";
 import type { NextPage } from "next";
 import { CalculatorIcon, ClockIcon, CogIcon, TrophyIcon } from "@heroicons/react/24/solid";
 
-// Ensure all needed icons are imported
-
 const ProfilePage: NextPage = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-black p-6 text-gray-100">

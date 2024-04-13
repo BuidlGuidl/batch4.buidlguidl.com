@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { NextPage } from "next";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { BugAntIcon, CodeBracketIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { CheckedInChart } from "~~/components/CheckedInChart";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
@@ -20,7 +20,6 @@ const Home: NextPage = () => {
             <span className="block text-2xl mb-2">Welcome to</span>
             <span className="block text-4xl font-bold">Batch 4</span>
           </h1>
-          <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
           <p className="text-lg flex gap-2 justify-center">
             <span className="font-bold">Checked in builders count:</span>
             {checkedInCountFetched ? (
@@ -51,6 +50,16 @@ const Home: NextPage = () => {
                 Explore your local transactions with the{" "}
                 <Link href="/blockexplorer" passHref className="link">
                   Block Explorer
+                </Link>{" "}
+                tab.
+              </p>
+            </div>
+            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
+              <CodeBracketIcon className="h-8 w-8 fill-secondary" />
+              <p>
+                Check out the Batch 4 builders in the{" "}
+                <Link href="/builders" passHref className="link">
+                  Builders
                 </Link>{" "}
                 tab.
               </p>

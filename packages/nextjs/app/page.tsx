@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Batch4RepoStatsChart from "../components/Batch4RepoStats";
 import type { NextPage } from "next";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { CheckedInChart } from "~~/components/CheckedInChart";
@@ -30,9 +31,16 @@ const Home: NextPage = () => {
             )}
           </p>
         </div>
-        <div className="w-full max-w-[800px] mx-auto mt-8">
-          <CheckedInChart />
+
+        <div className="w-full max-w-5xl mx-auto mt-8 flex flex-row justify-between items-center gap-8">
+          <div style={{ flex: 1 }}>
+            <CheckedInChart />
+          </div>
+          <div style={{ flex: 1 }}>
+            <Batch4RepoStatsChart />
+          </div>
         </div>
+
         <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
           <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
             <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">

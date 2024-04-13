@@ -84,9 +84,8 @@ const Batch4RepoStatsChart = () => {
             tooltip: {
               callbacks: {
                 label: context => {
-                  const label = context.dataset.label;
                   const value = context.parsed.y;
-                  return `${label}: ${value}`;
+                  return `${value}`;
                 },
               },
             },

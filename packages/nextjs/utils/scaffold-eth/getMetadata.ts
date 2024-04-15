@@ -10,7 +10,7 @@ export const getMetadata = ({
   imageRelativePath?: string;
 }): Metadata => {
   const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
+    ? `https://batch4.buidlguidl.com`
     : `http://localhost:${process.env.PORT || 3000}`;
   const imageUrl = `${baseUrl}${imageRelativePath}`;
   return {

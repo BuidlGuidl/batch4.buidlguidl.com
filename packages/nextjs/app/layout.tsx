@@ -5,7 +5,7 @@ import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
 
 const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+  ? `https://batch4.buidlguidl.com`
   : `http://localhost:${process.env.PORT || 3000}`;
 const imageUrl = `${baseUrl}/batch-4-logo.png`;
 

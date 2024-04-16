@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { CategoryScale, Chart as ChartJS, LineElement, LinearScale, PointElement, Tooltip } from "chart.js";
+import { BarElement, CategoryScale, Chart as ChartJS, LinearScale, Tooltip } from "chart.js";
 import { useTheme } from "next-themes";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import twconfig from "~~/tailwind.config";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip);
 
-const Batch4RepoStatsChart = () => {
+export const Batch4RepoStatsChart = () => {
   const [stats, setStats] = useState({
     stars: 0,
     forks: 0,
@@ -48,11 +48,9 @@ const Batch4RepoStatsChart = () => {
     datasets: [
       {
         data: [stats.stars, stats.forks, stats.openIssues, stats.pullRequests],
-        pointBackgroundColor: themeColor("secondary-content"),
+        backgroundColor: themeColor("secondary-content"),
         hoverBackgroundColor: themeColor("accent"),
         borderColor: themeColor("accent"),
-        showLine: true,
-        tension: 0.1,
       },
     ],
   };
@@ -64,17 +62,18 @@ const Batch4RepoStatsChart = () => {
   return (
     <div className="w-full max-w-[800px] mx-auto p-8 bg-base-100 rounded-3xl">
       <h1 className="text-center text-xl">Batch 4 Repository Stats</h1>
-      <Line
+      <Bar
         data={data}
         options={{
+          indexAxis: "y",
           scales: {
             x: {
+              beginAtZero: true,
               ticks: {
                 color: themeColor("secondary-content"),
               },
             },
             y: {
-              beginAtZero: true,
               ticks: {
                 color: themeColor("secondary-content"),
               },
@@ -84,7 +83,7 @@ const Batch4RepoStatsChart = () => {
             tooltip: {
               callbacks: {
                 label: context => {
-                  const value = context.parsed.y;
+                  const value = context.parsed.x;
                   return `${value}`;
                 },
               },
@@ -95,5 +94,3 @@ const Batch4RepoStatsChart = () => {
     </div>
   );
 };
-
-export default Batch4RepoStatsChart;

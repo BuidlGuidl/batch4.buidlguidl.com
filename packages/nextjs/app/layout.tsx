@@ -5,13 +5,13 @@ import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
 
 const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+  ? `https://batch4.buidlguidl.com`
   : `http://localhost:${process.env.PORT || 3000}`;
-const imageUrl = `${baseUrl}/thumbnail.jpg`;
+const imageUrl = `${baseUrl}/batch-4-logo.png`;
 
-const title = "Scaffold-ETH 2 App";
-const titleTemplate = "%s | Scaffold-ETH 2";
-const description = "Built with 🏗 Scaffold-ETH 2";
+const title = "Buidlguidl Batch #4";
+const titleTemplate = "%s | Buidlguidl Batch #4";
+const description = "Buidlguidl Batch #4 is a collection of builders learning to build on Ethereum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

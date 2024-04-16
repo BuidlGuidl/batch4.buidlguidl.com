@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Batch4RepoStatsChart from "../components/Batch4RepoStats";
 import type { NextPage } from "next";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { Batch4RepoStatsChart } from "~~/components/Batch4RepoStats";
 import { CheckedInChart } from "~~/components/CheckedInChart";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 

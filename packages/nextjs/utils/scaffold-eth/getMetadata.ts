@@ -15,6 +15,7 @@ export const getMetadata = ({
   imageRelativePath?: string;
 }): Metadata => {
   const imageUrl = `${baseUrl}${imageRelativePath}`;
+  const frameImageUrl = `${baseUrl}/batch-4.jpg`;
   return {
     metadataBase: new URL(baseUrl),
     title: {
@@ -30,7 +31,7 @@ export const getMetadata = ({
       description,
       images: [
         {
-          url: imageUrl,
+          url: frameImageUrl,
         },
       ],
     },
@@ -48,8 +49,8 @@ export const getMetadata = ({
     },
     other: {
       "fc:frame": "vNext",
-      "fc:frame:image": imageUrl,
-      "fc:frame:button:1": "Checkout the Buidlguidl Batch #4",
+      "fc:frame:image": frameImageUrl,
+      "fc:frame:button:1": "Checkout Batch #4",
       "fc:frame:button:1:action": "link",
       "fc:frame:button:1:target": baseUrl,
       "fc:frame:button:2": "Checkout buidlguidl.com",

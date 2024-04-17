@@ -10,7 +10,7 @@ const Batch4AddressDisplay = ({ address, index }: { address: string; index: numb
         <Batch4Avatar address={address} size={128} />
       </div>
       <h3 className="text-lg font-semibold text-center text-neutral">Builder {index + 1}</h3>
-      <div className="text-secondary text-sm text-center mt-1">
+      <div className="text-secondary-content text-sm text-center mt-1">
         <Batch4Address address={address} format="short" size="base" />
       </div>
       <div className="mt-4">

@@ -1,51 +1,13 @@
 import "@rainbow-me/rainbowkit/styles.css";
-import { Metadata } from "next";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
+import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://batch4.buidlguidl.com`
-  : `http://localhost:${process.env.PORT || 3000}`;
-const imageUrl = `${baseUrl}/batch-4-logo.png`;
-
-const title = "Buidlguidl Batch #4";
-const titleTemplate = "%s | Buidlguidl Batch #4";
-const description = "Buidlguidl Batch #4 is a collection of builders learning to build on Ethereum.";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: title,
-    template: titleTemplate,
-  },
-  description,
-  openGraph: {
-    title: {
-      default: title,
-      template: titleTemplate,
-    },
-    description,
-    images: [
-      {
-        url: imageUrl,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: [imageUrl],
-    title: {
-      default: title,
-      template: titleTemplate,
-    },
-    description,
-  },
-  icons: {
-    icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
-  },
-};
-
+export const metadata = getMetadata({
+  title: "Buidlguidl Batch #4",
+  description: "Buidlguidl Batch #4 is a collection of builders learning to build on Ethereum",
+});
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
     <html suppressHydrationWarning>

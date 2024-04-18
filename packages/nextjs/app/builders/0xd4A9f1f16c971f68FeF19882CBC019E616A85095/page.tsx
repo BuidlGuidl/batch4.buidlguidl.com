@@ -1,6 +1,6 @@
-import React from "react";
+import type { NextPage } from "next";
 
-const ProfilePage: React.FC = () => {
+const ProfilePage: NextPage = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="w-96 bg-white shadow-md rounded-lg">

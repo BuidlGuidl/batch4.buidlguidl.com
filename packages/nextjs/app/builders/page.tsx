@@ -19,7 +19,7 @@ const BuildersPage: NextPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-base-200">
-      <div className="max-w-7xl mx-auto p-8 bg-base-300 shadow-2xl rounded-2xl my-10">
+      <div className="max-w-7xl mx-auto p-8 bg-base-100 shadow-2xl rounded-2xl my-10">
         <h1 className="text-4xl font-extrabold text-center text-neutral mb-10">Our Builders</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {isLoading ? (
@@ -28,7 +28,7 @@ const BuildersPage: NextPage = () => {
             </div>
           ) : (
             uniqueBuilders.map((builder, index) => (
-              <div key={index} className="bg-neutral border-2 border-gray-200 shadow-sm rounded-lg overflow-hidden">
+              <div key={index} className="shadow-sm bg-base-100 overflow-hidden">
                 <Batch4AddressDisplay address={builder} index={index} />
               </div>
             ))
